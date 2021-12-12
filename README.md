@@ -1,3 +1,3 @@
 # RequerimientosMiniJuego
 
-- CRUD de [imagenes](https://github.com/RubenTorresGutierrez/RequerimientosMiniJuego/tree/imagenes)
+- CRUD de [imágenes](https://github.com/RubenTorresGutierrez/RequerimientosMiniJuego/tree/imagenes)
