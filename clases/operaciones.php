@@ -30,7 +30,32 @@
 		    //Enviar consulta al método consultar() de la clase Conexion
 		    $this->conexion->consultar($sql);
 
+		    //Cerrar conexión
+		    $this->conexion->cerrarConexion();
+
 		}else echo 'No se ha subido';
+
+	    }
+
+	    function obtenerSprites(){
+
+		//Consulta SQL
+		$sql = 'SELECT * FROM sprite';
+
+		//Enviar la consulta al método consultar() de la clase Conexion
+		$this->conexion->consultar($sql);
+
+		//Añadir el resultado de la consulta a un array
+		$datos = array();
+		while ($fila = $this->conexion->extraerFila()) {
+		    array_push($datos, $fila);
+		}
+
+		//Cerrar conexión
+		$this->conexion->cerrarConexion();
+
+		//Devolver los datos
+		return $datos;
 
 	    }
 

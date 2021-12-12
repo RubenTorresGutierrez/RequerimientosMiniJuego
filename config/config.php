@@ -3,4 +3,4 @@
     define('SERVIDOR', 'localhost');
     define('USUARIO', 'root');
     define('PASSWD', '1234');
-    define('BD', 'PuzzleTablaPeriodica');
+    define('BD', 'Minijuego');

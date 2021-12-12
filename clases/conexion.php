@@ -6,7 +6,7 @@
     class Conexion{
 
         // ATRIBUTOS
-        private $mysqli = null;
+        private $conexion = null;
         private $resultado = null;
 
         function __construct(){
@@ -14,14 +14,43 @@
 	    //OBJETOS
 	    // Se instancia un objeto desde la clase mysqli con los datos 
 	    // de conexión importados en forma de constantes desde configdb.php
-	    $this->mysqli = new mysqli(SERVIDOR, USUARIO, PASSWD, BD);
+	    $this->conexion = new mysqli(SERVIDOR, USUARIO, PASSWD, BD);
 
 	}
 
 	function consultar($consulta){
 
-	    return $this->resultado = $this->mysqli->query($consulta);
+	    return $this->resultado = $this->conexion->query($consulta);
 
 	}
 
+	function extraerFila(){
+
+            return $this->resultado->fetch_assoc();
+
+        }
+
+        function numeroFilas(){
+
+            return $this->resultado->num_rows;
+
+        }
+
+        function filasAfectadas(){
+
+	    return $this->resultado->affected_rows;
+            
+        }
+
+        function codigoError(){
+
+            return $this->conexion->errno;
+
+        }
+
+        function cerrarConexion(){
+
+            $this->conexion->close();
+
+        }
     }
