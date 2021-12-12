@@ -2,14 +2,14 @@
 
     //IMPORTACIONES
     require_once 'estructuraHtml.php';
-    /* require_once 'clases/operaciones.php'; */
+    require_once 'clases/operaciones.php';
 
-    /* //OBJETOS */
-    /* $operaciones = new Operaciones(); */
+    //OBJETOS
+    $operaciones = new Operaciones();
 
-    /* if (isset($_POST['enviar'])) */
-    /* 	if (!empty($_FILES['imagen'])) */
-    /* 		$operaciones->subirImagen($_FILES['imagen']); */
+    if (isset($_POST['enviar']))
+    	if (!empty($_FILES['imagen']) && sizeof($_FILES['imagen']) >= 2)
+    		$operaciones->subirImagen($_FILES['imagen']);
     
 ?>
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
         ?>
 	<main>
 	    <form action="index.php" method="POST">
-		<input type="file" name="imagen" />
+		<input type="file" name="imagen[]" multiple />
 		<input type="submit" name="enviar" value="ENVIAR" />
 	    </form>
 	</main> 

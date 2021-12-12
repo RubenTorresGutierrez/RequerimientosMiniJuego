@@ -17,7 +17,7 @@
 	    function subirImagen($imagen){
 
 		//Ruta donde se va a subir la imagen
-		$ruta = 'PuzzleTablaPeriodica/personajes/img';
+		$ruta = '/img';
 		$rutaNombreImagen = $ruta.basename($imagen['name']);
 
 		if (move_uploaded_file($imagen['tmp_name'], $rutaNombreImagen)){
