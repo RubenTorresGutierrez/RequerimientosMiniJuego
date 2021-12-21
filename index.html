@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/crud.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+    <title>CRUD Elementos Tabla Periódica</title>
+  </head>
+  <body>
+      <h1>Puzzle Tabla Periódica</h1>
+      <h2>Crud Elementos</h2>
+      <main>
+      <p>El último elemento añadido fue el número: n</p>
+
+      <form method="post">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" value="" placeholder="Ej: Hierro" maxlength="25">
+
+        <label for="simbolo">Símbolo</label>
+        <input type="text" name="simbolo" placeholder="Ej: Fe" maxlength="2">
+
+        <label for="color">Color</label>
+
+        <select name="color">
+
+          <option value="amarillo">Amarillo</option>
+          <option value="naranja">Naranja</option>
+          <option value="naranajaclaro">Naranja claro</option>
+          <option value="verde">Verde</option>
+          <option value="verdeclaro">Verde claro</option>
+          <option value="blanco">Blanco</option>
+          <option value="azul">Azul</option>
+          <option value="morado">Morado</option>
+          <option value="cian">Cian</option>
+
+        </select>
+
+        <input type="submit" name="enviar" value="Guardar elemento">
+      </form>
+    </main>
+  </body>
+</html>
